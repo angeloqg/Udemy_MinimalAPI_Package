@@ -7,8 +7,13 @@ builder.AddDapper();
 // Atribuindo a configuração de serviços
 builder.AddServices();
 
+// Configurando o Swgger
+builder.AddOpenAPI();
+
 var app = builder.Build();
 app.UserServices();
 app.MapCarter();
+app.UseOpenAPI(String.Empty);
+
 
 app.Run();
