@@ -14,5 +14,4 @@ app.UserServices();
 app.MapCarter();
 app.UseOpenAPI(String.Empty);
 
-
 app.Run();
