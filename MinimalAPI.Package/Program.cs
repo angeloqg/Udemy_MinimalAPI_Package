@@ -1,4 +1,3 @@
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurando a extensão de configuração de banco de dados
@@ -7,7 +6,7 @@ builder.AddDapper();
 // Atribuindo a configuração de serviços
 builder.AddServices();
 
-// Configurando o Swgger
+// Configurando o Swagger
 builder.AddOpenAPI();
 
 var app = builder.Build();
