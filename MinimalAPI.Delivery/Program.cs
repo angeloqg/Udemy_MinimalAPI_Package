@@ -1,3 +1,5 @@
+using MinimalAPI.Delivery.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurando o Swagger
@@ -5,6 +7,9 @@ builder.AddOpenAPI();
 
 // Atribuindo a configuração de serviços
 builder.AddServices();
+
+// Configurando o EFCore
+builder.Services.AddEFCore(builder.Configuration);
 
 var app = builder.Build();
 
