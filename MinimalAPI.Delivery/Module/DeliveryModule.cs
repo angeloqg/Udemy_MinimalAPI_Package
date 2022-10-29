@@ -1,6 +1,4 @@
-﻿using Carter;
-
-namespace MinimalAPI.Delivery.Module
+﻿namespace MinimalAPI.Delivery.Module
 {
     public class DeliveryModule : ICarterModule
     {
