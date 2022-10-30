@@ -11,6 +11,16 @@ namespace MinimalAPI.Delivery.Extensions
 
             return services;
         }
-    }
 
+        public static async Task<IApplicationBuilder> MigrateData(this IApplicationBuilder app)
+        {
+            using (var db = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<DeliveryContext>())
+            {
+                await db.Database.MigrateAsync();
+            }
+
+            return app;
+        }
+
+    }
 }

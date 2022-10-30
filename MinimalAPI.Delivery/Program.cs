@@ -1,5 +1,3 @@
-using MinimalAPI.Delivery.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurando o Swagger
@@ -16,5 +14,7 @@ var app = builder.Build();
 app.UserServices();
 app.MapCarter();
 app.UseOpenAPI(String.Empty);
+
+await app.MigrateData();
 
 app.Run();
