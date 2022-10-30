@@ -18,8 +18,8 @@ namespace MinimalAPI.Delivery.Extensions
             {
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
-                    Description = "MAPI - Packages",
-                    Title = "MAPI - Packages",
+                    Description = "MAPI - Delivery",
+                    Title = "MAPI - Delivery",
                     Version = "v1",
                     Contact = new OpenApiContact
                     {
